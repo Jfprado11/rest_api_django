@@ -4,11 +4,12 @@ FROM python:3.8-slim
 ENV APP_HOME /app
 WORKDIR $APP_HOME
 RUN mkdir -p /app
+COPY ./requirements.txt /requirements.txt
 COPY . ./app
 
 RUN python -m venv /py && \
     /py/bin/pip install --upgrade pip && \
-    /py/bin/pip install -r ./requirements.txt
+    /py/bin/pip install -r /requirements.txt
 
 ENV PATH="/py/bin:$PATH"
 ENV PYTHONDONTWRITEBYTECODE 1
