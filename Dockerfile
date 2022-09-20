@@ -18,4 +18,4 @@ ENV PYTHONUNBUFFERED 1
 EXPOSE 8080
 
 # Gunicorn as app server
-CMD exec gunicorn --bind 0.0.0.0:$PORT --workers 1 --threads 8 --timeout 0 api_workplace.wsgi:application
+CMD exec gunicorn --bind 0.0.0.0:$PORT --workers 1 --threads 8 --timeout 0 app.api_workplace.wsgi:application
