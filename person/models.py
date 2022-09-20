@@ -28,4 +28,4 @@ class Person(models.Model):
     document = models.IntegerField(unique=True)
     name = models.CharField(max_length=120)
     last_name = models.CharField(max_length=120)
-    hobbie = models.CharField(max_length=200)
+    hobbie = models.CharField(max_length=500)
